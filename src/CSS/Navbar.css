@@ -89,11 +89,30 @@ height: 114px;
 /* MENU ITEMS */
 .menuItems {
   display: flex;
-  gap: 25px;
+  gap: 90px;
   color: #333;
 }
 
 .menuItems span {
+  cursor: pointer;
+}
+
+.menuLink {
+  color: black;          
+  text-decoration: none;  
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.menuLink:hover {
+  background-color: #f0c14b;
+  color: white;              
+  cursor: pointer;           
+}
+button:hover {
+  background-color: #f0c14b;
+  color: white;
   cursor: pointer;
 }
 

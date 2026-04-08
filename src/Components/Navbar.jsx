@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import "../CSS/Navbar.css";
 import logo from "../Images/BigBasket.png"; 
 import CartIcon from "../Images/Cart.png"; 
@@ -36,8 +37,7 @@ const Navbar = () => {
         </button>
 
         <div className="menuItems">
-          <span>Exotic  Fruits & Veg...</span>
-          <span>Tea</span>
+          <span>Exotic Fruits & Veg...</span>
           <span>Ghee</span>
           <span>Nandini</span>
           <span>Fresh Vegetables</span>
