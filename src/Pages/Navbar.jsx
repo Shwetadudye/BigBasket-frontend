@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
 
-      {/* TOP BAR */}
+      
       <div className="topbar">
         <div className="logo">
           <img src={logo} alt="bigbasket" />
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* BOTTOM MENU */}
+      
       <div className="menu">
         <button className="categoryBtn">
           Shop by Category 
