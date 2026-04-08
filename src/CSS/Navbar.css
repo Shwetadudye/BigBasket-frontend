@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+/* NAVBAR CONTAINER */
+.navbar {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 15px;
+}
+
+/* LOGO */
+.logo img {
+  width: 203px;
+height: 114px;
+}
+
+/* SEARCH */
+.searchBox {
+  flex: 1;
+}
+
+.searchBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* DELIVERY */
+.delivery {
+  background: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.delivery span {
+  color: gray;
+}
+
+/* LOGIN BUTTON */
+.loginBtn {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* CART */
+.cart img {
+  width: 35px;
+  cursor: pointer;
+}
+
+/* MENU BAR */
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+/* CATEGORY BUTTON */
+.categoryBtn {
+  background: #84c225;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MENU ITEMS */
+.menuItems {
+  display: flex;
+  gap: 90px;
+  color: #333;
+}
+
+.menuItems span {
+  cursor: pointer;
+}
+
+.menuLink {
+  color: black;          
+  text-decoration: none;  
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.menuLink:hover {
+  background-color: #f0c14b;
+  color: white;              
+  cursor: pointer;           
+}
+button:hover {
+  background-color: #f0c14b;
+  color: white;
+  cursor: pointer;
+}
+
+/* SMART BASKET */
+.smartBasket {
+  /* margin-left: auto; */
+  color: green;
+  font-weight: bold;
+}
