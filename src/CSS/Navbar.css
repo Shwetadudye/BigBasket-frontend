@@ -122,3 +122,17 @@ button:hover {
   color: green;
   font-weight: bold;
 }
+
+.menuItems a {
+  text-decoration: none;
+  color: black;
+  margin-right: 15px;
+  padding: 5px 10px;
+  /* transition: all 0.3s ease; */
+}
+
+.menuItems a.active {
+  color: green;
+  font-weight: bold;
+  border-bottom: 2px solid green;
+}
