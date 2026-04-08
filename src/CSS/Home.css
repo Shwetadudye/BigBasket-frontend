@@ -57,3 +57,10 @@ img {
   width: 63px;
   height: 51px;
 }
+
+.nav-box {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
