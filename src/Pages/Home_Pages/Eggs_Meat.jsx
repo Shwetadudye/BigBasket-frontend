@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getData } from '../../Api/FetchData';
+import ProductCard from '../../Components/ProductCard';
 
 const Eggs_Meat = () => {
   const [products, setProducts] = useState([]);
@@ -16,15 +17,11 @@ const Eggs_Meat = () => {
     <div>
       <h1>Eggs, Meat & Fish</h1>
 
-      {products.map((product) => (
-        <div key={product._id}>
-          <img src={product.image} alt={product.name} width="150px" />
-          <span>id: {product._id}</span>
-          <span>name: {product.name}</span>
-          <span>brand: {product.brand}</span>
-          <span>price: ₹{product.price}</span>
-        </div>
-      ))}
+      <div style={{display:'flex',justifyContent:'space-evenly',flexWrap:'wrap',gap:'20px'}}>
+        {products.map((product) => (
+          <ProductCard item={product}/>
+        ))}
+      </div>
 
     </div>
   );
