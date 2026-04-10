@@ -10,6 +10,7 @@ const Home_Page = () => {
       <NavLink to="/Eggs_Meat" className="nav-box">
         <div className="box child1">
           eggs, meat <br /> and fish
+          
         </div>
       </NavLink>
 
