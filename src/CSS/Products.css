@@ -1,0 +1,24 @@
+.productBox{
+    display: flex;
+    justify-content: space-around;
+}
+.mainContainer{
+    margin: 40px 40px;
+    background: #f2eeeebc;
+    padding: 20px 20px 50px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+ h2{
+    padding: 20px 0px;
+    font-size: large;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

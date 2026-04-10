@@ -8,11 +8,6 @@
   /* font-size: 22px; */
 }
 
-body {
-  border: 1px solid gray;
-  height: 95vh;
-}
-
 .box {
   background: navy;
   text-align: center;
@@ -24,7 +19,7 @@ body {
   align-items: center;
 }
 
-.mainContainer {
+.mainContainerHome {
   height: inherit;
   display: flex;
   justify-content: center;
