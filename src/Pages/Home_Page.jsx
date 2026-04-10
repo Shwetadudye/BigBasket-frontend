@@ -1,4 +1,3 @@
-import React from 'react'
 import "../CSS/Home.css";
 import logo from "../Images/NeuPass.png";
 import { NavLink } from 'react-router-dom';
