@@ -1,4 +1,3 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home_Page from '../Pages/Home_Page'
 import Exotic_Fruits_Veg from '../Pages/Navbar_Pages/Exotic_Fruits_Veg'
