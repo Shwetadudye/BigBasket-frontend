@@ -1,0 +1,109 @@
+/* Card Container */
+.card {
+  width: 270px;
+  height: 55vh;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Discount Badge */
+.badge {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background: #4caf50;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Product Image */
+.productImg {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 8px;
+  padding: 15px;
+  border: 2px solid #f2eeeef3;
+}
+
+/* Brand */
+.brand {
+  font-size: 12px;
+  color: #888;
+  margin: 26px 0px 5px;
+}
+
+/* Product Name */
+.card h4 {
+  font-size: 15px;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+/* Rating */
+.rating {
+  font-size: 13px;
+  color: #f5a623;
+  margin: 15px 0px 8px;
+}
+
+/* Price Section */
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.oldPrice {
+  font-size: 13px;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+
+/* Stock */
+.stock {
+  font-size: 12px;
+  color: green;
+  margin: 6px 0;
+}
+
+/* Add Button */
+.addBtn {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid red;
+  color: red;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top:18px
+}
+
+.addBtn:hover {
+  background: red;
+  color: #fff;
+}
+h6{
+  /* border: 1px solid; */
+    width: max-content;
+    padding: 5px;
+    border-radius: 15px;
+    position: absolute;
+    right: 10px;
+    background:#f2eeeedb ;
+}
