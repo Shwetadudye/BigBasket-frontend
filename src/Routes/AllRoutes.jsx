@@ -8,7 +8,7 @@ import Fresh_Vegetables from '../Pages/Navbar_Pages/Fresh_Vegetables'
 import Eggs_Meat from '../Pages/Home_Pages/Eggs_Meat'
 import Buy_and_Save from '../Pages/Home_Pages/Buy_and_Save'
 import Ayurveda from '../Pages/Home_Pages/Ayurveda'
-import Combo_Store from '../Pages/Home_Pages/Combo_Store'
+import Combo_Store from '..//Pages/Home_Pages/Combo_Store'
 import Deals_of_Week from '../Pages/Home_Pages/Deals_of_Week'
 import Cart from '../Pages/Navbar_Pages/Cart'
 

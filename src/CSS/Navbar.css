@@ -136,3 +136,152 @@ button:hover {
   font-weight: bold;
   border-bottom: 2px solid green;
 }
+
+.categoryWrapper {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 750px;
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* LEFT */
+.left {
+  width: 220px;
+  background: #111;
+  color: white;
+  max-height: 400px;
+  overflow-y: auto;
+
+  /* 👇 YE ADD KARO */
+  border-right: 2px solid #ccc;
+}
+
+.left div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.left .active,
+.left div:hover {
+  background: #333;
+}
+
+/* MIDDLE */
+.middle {
+  width: 260px;
+  background: #f3f3f3;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.middle div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.middle .active,
+.middle div:hover {
+  background: #ddd;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.right div {
+  padding: 8px;
+}
+
+.noData {
+  padding: 20px;
+  color: gray;
+}
+
+/* ===== CATEGORY WRAPPER ===== */
+.categoryWrapper {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%;  
+  left: 0;
+  width: 750px;
+  display: flex;
+  background: rgb(212, 210, 210);
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.left {
+  width: 220px;
+  background: #313030;
+  color: white;
+  max-height: 400px;
+  overflow-y: auto;
+  border-right: 2px solid #e0e0e0;
+  font-size: small;
+}
+
+.left div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.left .active,
+.left div:hover {
+  background: #8e8d8d;
+}
+
+.middle {
+  width: 260px;
+  background: #f3f3f3;
+  max-height: 400px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  font-weight: 300;
+  font-size: small;
+}
+
+.middle div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.middle .active,
+.middle div:hover {
+  background: #ddd;
+}
+
+.right {
+  flex: 1;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: small;
+  font-weight: 300;
+}
+
+.right div {
+  padding: 8px;
+}
+
+.noData {
+  padding: 20px;
+  color: gray;
+}
+
