@@ -11,6 +11,9 @@ import Ayurveda from '../Pages/Home_Pages/Ayurveda'
 import Combo_Store from '../Pages/Home_Pages/Combo_Store'
 import Deals_of_Week from '../Pages/Home_Pages/Deals_of_Week'
 import Cart from '../Pages/Navbar_Pages/Cart'
+import Login from '../Pages/Login_signUp/Login'
+import SignUp from '../Pages/Login_signUp/SignUp'
+
 
 export const AllRoutes = () => {
   return (
@@ -28,7 +31,10 @@ export const AllRoutes = () => {
         <Route path='/Combo_Store' element={<Combo_Store/>}></Route>
         <Route path='/Deals_of_Week' element={<Deals_of_Week/>}></Route>
         <Route path='/Cart' element={<Cart/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/signup' element={<SignUp/>}></Route>
         
+     
       </Routes>
     </>
   )
