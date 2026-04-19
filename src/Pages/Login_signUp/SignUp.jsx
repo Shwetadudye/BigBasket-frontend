@@ -1,4 +1,5 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom';
 import "../Login_signUp/Login.css";
 import { useDispatch } from "react-redux";
 import { signupThunk } from "../../Redux/SignupSlicer";
@@ -7,6 +8,7 @@ const SignUp = ({ open, onClose,openLogin }) => {
   if (!open) return null;
 
   const dispatchSignUp = useDispatch();
+  const navigate = useNavigate();
 
    const formData =[
     {

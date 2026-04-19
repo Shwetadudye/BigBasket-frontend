@@ -23,7 +23,6 @@ const Product = ({ title, products }) => {
   return (
     <div className="mainContainer">
       
-      {/* Header */}
       <div className="header">
         <h2>{title}</h2>
 
@@ -34,7 +33,6 @@ const Product = ({ title, products }) => {
         </div>
       </div>
 
-      {/* Products */}
       <div className="productBox">
         {visibleProducts.map((item) => (
           <ProductCard key={item._id} item={item} />

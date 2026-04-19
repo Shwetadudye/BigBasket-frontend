@@ -16,11 +16,10 @@ const Ayurveda = () => {
 
   return (
     <div>
-      <h1>Ayurveda</h1>
 
      <div style={{display:'flex',justifyContent:'space-evenly',flexWrap:'wrap',gap:'20px'}}>
         {products.map((product) => (
-          <ProductCard item={product}/>
+          <ProductCard  key ={product._id}  item={product}/>
         ))}
       </div>
     </div>

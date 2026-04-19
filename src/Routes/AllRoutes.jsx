@@ -13,6 +13,10 @@ import Deals_of_Week from '../Pages/Home_Pages/Deals_of_Week'
 import Cart from '../Pages/Navbar_Pages/Cart'
 import Login from '../Pages/Login_signUp/Login'
 import SignUp from '../Pages/Login_signUp/SignUp'
+import PrivateRoute from '../Pages/PrivateRoute'
+import ProductDetails from '../Pages/ProductDetails'
+import Search from '../Pages/Search'
+import Checkout from '../Pages/Checkout'
 
 
 export const AllRoutes = () => {
@@ -30,10 +34,19 @@ export const AllRoutes = () => {
         <Route path='/Ayurveda' element={<Ayurveda/>}></Route>
         <Route path='/Combo_Store' element={<Combo_Store/>}></Route>
         <Route path='/Deals_of_Week' element={<Deals_of_Week/>}></Route>
-        <Route path='/Cart' element={<Cart/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/Cart' 
+               element=
+               {<PrivateRoute>
+                <Cart/>
+                </PrivateRoute>}>
+                </Route> 
+        <Route path="/search" element={<Search />} />
+        {/* <Route path = '/Cart' element={<Cart />} ></Route> */}
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path='/login' element={<Login open={true}/>}></Route>
         <Route path='/signup' element={<SignUp/>}></Route>
-        
+        <Route path='/product/:id' element={<ProductDetails />} />
+
      
       </Routes>
     </>

@@ -1,0 +1,193 @@
+.cartContainer {
+  padding: 40px 60px;
+  background: #f5f6f8;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+  color: #777;
+}
+
+.cartLayout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.cartItems {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartCard {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  align-items: flex-start;
+  border: 1px solid #eee;
+  transition: all 0.25s ease;
+}
+
+.cartCard:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.imgBox img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #f0f0f0;
+}
+
+.infoBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.brand {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.weight {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 600;
+  color: #e4002b;
+  margin-top: 6px;
+}
+
+.originalPrice {
+  margin-left: 8px;
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.discount {
+  margin-left: 8px;
+  color: green;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.qtyBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.qtyBox button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #333;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qtyBox button:hover {
+  background: #e4002b;
+  color: white;
+  border-color: #e4002b;
+}
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.removeBtn:hover {
+  color: #e4002b;
+}
+
+.summaryBox {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  border: 1px solid #eee;
+}
+
+.summaryBox h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.summaryBox p {
+  font-size: 15px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.summaryBox h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #222;
+}
+
+.checkoutBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: #ff3f6c;
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.checkoutBtn:hover {
+  background: #e6365f;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(255,63,108,0.3);
+}
