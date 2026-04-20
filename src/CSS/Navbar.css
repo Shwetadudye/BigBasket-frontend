@@ -4,15 +4,256 @@
   box-sizing: border-box;
   font-family: Arial;
 }
-
-/* NAVBAR CONTAINER */
 .navbar {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #ddd;
 }
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 15px;
+}
+.logo img {
+  width: 203px;
+height: 114px;
+}
+.searchBox {
+  flex: 1;
+}
+.searchBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.delivery {
+  background: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.delivery span {
+  color: gray;
+}
+.loginBtn {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cart img {
+  width: 35px;
+  cursor: pointer;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+.categoryBtn {
+  background: #84c225;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menuItems {
+  display: flex;
+  gap: 90px;
+  color: #333;
+}
+.menuItems span {
+  cursor: pointer;
+}
+.menuLink {
+  color: black;          
+  text-decoration: none;  
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; 
+}
+.menuLink:hover {
+  background-color: #f0c14b;
+  color: white;              
+  cursor: pointer;           
+}
+button:hover {
+  background-color: #f0c14b;
+  color: white;
+  cursor: pointer;
+}
+.smartBasket {
+  color: green;
+  font-weight: bold;
+}
 
-/* TOP BAR */
+.menuItems a {
+  text-decoration: none;
+  color: black;
+  margin-right: 15px;
+  padding: 5px 10px;
+}
+.menuItems a.active {
+  color: green;
+  font-weight: bold;
+  border-bottom: 2px solid green;
+}
+
+.categoryWrapper {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 750px;
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.left {
+  width: 220px;
+  background: #111;
+  color: white;
+  max-height: 400px;
+  overflow-y: auto;
+  border-right: 2px solid #ccc;
+}
+
+.left div {
+  padding: 12px;
+  cursor: pointer;
+}
+.left .active,
+.left div:hover {
+  background: #333;
+}
+.middle {
+  width: 260px;
+  background: #f3f3f3;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.middle div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.middle .active,
+.middle div:hover {
+  background: #ddd;
+}
+.right {
+  flex: 1;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.right div {
+  padding: 8px;
+}
+
+.noData {
+  padding: 20px;
+  color: gray;
+}
+.categoryWrapper {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%;  
+  left: 0;
+  width: 750px;
+  display: flex;
+  background: rgb(212, 210, 210);
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.left {
+  width: 220px;
+  background: #313030;
+  color: white;
+  max-height: 400px;
+  overflow-y: auto;
+  border-right: 2px solid #e0e0e0;
+  font-size: small;
+}
+
+.left div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.left .active,
+.left div:hover {
+  background: #8e8d8d;
+}
+
+.middle {
+  width: 260px;
+  background: #f3f3f3;
+  max-height: 400px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  font-weight: 300;
+  font-size: small;
+}
+
+.middle div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.middle .active,
+.middle div:hover {
+  background: #ddd;
+}
+
+.right {
+  flex: 1;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: small;
+  font-weight: 300;
+}
+
+.right div {
+  padding: 8px;
+}
+
+.noData {
+  padding: 20px;
+  color: gray;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+.navbar {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
 .topbar {
   display: flex;
   align-items: center;
@@ -20,13 +261,11 @@
   gap: 15px;
 }
 
-/* LOGO */
 .logo img {
   width: 203px;
 height: 114px;
 }
 
-/* SEARCH */
 .searchBox {
   flex: 1;
 }
@@ -37,8 +276,6 @@ height: 114px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-/* DELIVERY */
 .delivery {
   background: #f1f1f1;
   padding: 8px 12px;
@@ -49,8 +286,6 @@ height: 114px;
 .delivery span {
   color: gray;
 }
-
-/* LOGIN BUTTON */
 .loginBtn {
   background: black;
   color: white;
@@ -60,13 +295,31 @@ height: 114px;
   cursor: pointer;
 }
 
-/* CART */
+.cart{
+  position: relative;
+  display: inline-block;
+}
+
 .cart img {
   width: 35px;
   cursor: pointer;
 }
+.cartCount {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-/* MENU BAR */
 .menu {
   display: flex;
   align-items: center;
@@ -75,7 +328,6 @@ height: 114px;
   justify-content: space-evenly;
 }
 
-/* CATEGORY BUTTON */
 .categoryBtn {
   background: #84c225;
   color: white;
@@ -85,14 +337,11 @@ height: 114px;
   font-weight: bold;
   cursor: pointer;
 }
-
-/* MENU ITEMS */
 .menuItems {
   display: flex;
   gap: 90px;
   color: #333;
 }
-
 .menuItems span {
   cursor: pointer;
 }
@@ -116,9 +365,9 @@ button:hover {
   cursor: pointer;
 }
 
-/* SMART BASKET */
+
 .smartBasket {
-  /* margin-left: auto; */
+  
   color: green;
   font-weight: bold;
 }
@@ -128,11 +377,41 @@ button:hover {
   color: black;
   margin-right: 15px;
   padding: 5px 10px;
-  /* transition: all 0.3s ease; */
+
 }
 
 .menuItems a.active {
   color: green;
   font-weight: bold;
   border-bottom: 2px solid green;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 300px;
+}
+
+.searchWrapper input {
+  width: 100%;
+  padding: 8px;
+}
+
+.searchBox {
+  position: relative;
+}
+
+.searchDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 99999; 
+}
+
+.suggestionItem {
+  padding: 10px;
+  cursor: pointer;
+  color: black;  
 }
