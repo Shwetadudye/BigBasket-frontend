@@ -1,16 +1,76 @@
+<<<<<<< HEAD
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+=======
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+>>>>>>> fe342a78273352433fd423d407d346be41e82c25
 
 import "../CSS/Navbar.css";
 import logo from "../Images/BigBasket.png";
 import CartIcon from "../Images/Cart.png";
 import Login from "../Pages/Login_signUp/Login";
 import SignUp from "../Pages/Login_signUp/SignUp";
+<<<<<<< HEAD
 import { useSelector } from "react-redux";
 import { getData } from "../Api/FetchData";
+=======
+
+const categoriesData = {
+  Electronics: {
+    "Audio devices": ["Earbuds", "Headphones", "Neckbands", "Speakers & Soundbars", "Wired Earphones"],
+    "Cameras & Accessories": [],
+    "Home Appliances": [],
+  },
+  Fashion: {
+    "Fashion Essentials": ["Belts", "Eyewear", "Handbags & Wallets", "Jewellery"],
+    "Footwear": [],
+  },
+  "Food Court": {
+    "Biryani & Rice Delights": ["Biryani", "Rice"],
+    "Pizza & Pasta": [],
+  },
+   "Pharma-L1": {
+    "Pharma-L2":["Pharma-L3"],
+    
+  },
+   "Pharmancy & Wellness": {
+    "OTC Medicine & Device": ["Adult Nutriyion", "Assorted Devices", "Ayurveda Dermatology Meds", "Baby Food Variety", "Bath & Body Care", "Child Care"],
+    "OTX Medicine": [],
+    "RX Medicine": [],
+  },
+   "fruits & Vegetables": {
+    "Cuts & Sprouts": ["Cut & Peeled Veggies", "Cut Fruit, Tender Coconut", "Fresh Juices & Milkshakes", "Fresh Salads & Sprouts", "Recipe Packs"],
+    "Fresh Fruits": [],
+    "Herbs & Seasonings": [],
+    "Organic Fruits & Vegetables": [],
+  },
+   "Foodgrains, Oil & Masala": {
+    "Biryani & Rice Delights": ["Biryani", "Rice"],
+    "Pizza & Pasta": [],
+  },
+   "Bakery, Cakes & Dairy": {
+    "Biryani & Rice Delights": ["Biryani", "Rice"],
+    "Pizza & Pasta": [],
+  },
+   "Beverages": {
+    "Biryani & Rice Delights": ["Biryani", "Rice"],
+    "Pizza & Pasta": [],
+  },
+   "Snacks & Branded Foods": {
+    "Biryani & Rice Delights": ["Biryani", "Rice"],
+    "Pizza & Pasta": [],
+  },
+};
+
+>>>>>>> fe342a78273352433fd423d407d346be41e82c25
 
 const Navbar = () => {
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openSignup, setOpenSignup] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
+<<<<<<< HEAD
   const [openLogin, setOpenLogin] = React.useState(false);
   const [openSignup, setOpenSignup] = React.useState(false);
   const cartItems = useSelector((store)=> store.cart.cart);
@@ -66,14 +126,30 @@ const Navbar = () => {
     document.addEventListener("click", handleClick);
     return () => document.removeEventListener("click", handleClick);
   }, []);
+=======
+  const [activeCategory, setActiveCategory] = useState("Electronics");
+  const [activeSub, setActiveSub] = useState("Audio devices");
+
+  const categories = Object.keys(categoriesData);
+  const subCategories = Object.keys(categoriesData[activeCategory] || {});
+  const items = categoriesData[activeCategory]?.[activeSub] || [];
+>>>>>>> fe342a78273352433fd423d407d346be41e82c25
 
   return (
     <div className="navbar">
 
+<<<<<<< HEAD
+=======
+      {/* TOPBAR */}
+>>>>>>> fe342a78273352433fd423d407d346be41e82c25
       <div className="topbar">
 
         <div className="logo">
+<<<<<<< HEAD
           <NavLink to='/'> 
+=======
+          <NavLink to="/">
+>>>>>>> fe342a78273352433fd423d407d346be41e82c25
             <img src={logo} alt="bigbasket" />
           </NavLink>
         </div>
@@ -116,6 +192,7 @@ const Navbar = () => {
 
         <button className="loginBtn" onClick={() => setOpenLogin(true)}>
           Login
+<<<<<<< HEAD
         </button>
 
         <Login
@@ -150,8 +227,96 @@ const Navbar = () => {
       <div className="menu">
         <button className="categoryBtn">
           Shop by Category 
+=======
+>>>>>>> fe342a78273352433fd423d407d346be41e82c25
         </button>
 
+        <Login
+          open={openLogin}
+          onClose={() => setOpenLogin(false)}
+          openSignup={() => {
+            setOpenLogin(false);
+            setOpenSignup(true);
+          }}
+        />
+
+        <SignUp
+          open={openSignup}
+          onClose={() => setOpenSignup(false)}
+          openLogin={() => {
+            setOpenSignup(false);
+            setOpenLogin(true);
+          }}
+        />
+
+        <NavLink to="/Cart">
+          <div className="cart">
+            <img src={CartIcon} alt="cart" />
+          </div>
+        </NavLink>
+      </div>
+
+      {/* MENU */}
+      <div className="menu">
+
+        {/* CATEGORY BUTTON */}
+        <div
+          className="categoryWrapper"
+          onMouseEnter={() => setOpenMenu(true)}
+          onMouseLeave={() => setOpenMenu(false)}
+        >
+          <button className="categoryBtn">
+            Shop by Category ⬇
+          </button>
+
+          {/* DROPDOWN */}
+          {openMenu && (
+            <div className="megaMenu">
+
+              {/* LEFT */}
+              <div className="left">
+                {categories.map((cat) => (
+                  <div
+                    key={cat}
+                    className={activeCategory === cat ? "active" : ""}
+                    onMouseEnter={() => {
+                      setActiveCategory(cat);
+                      const firstSub = Object.keys(categoriesData[cat])[0];
+                      setActiveSub(firstSub);
+                    }}
+                  >
+                    {cat}
+                  </div>
+                ))}
+              </div>
+
+              {/* MIDDLE */}
+              <div className="middle">
+                {subCategories.map((sub) => (
+                  <div
+                    key={sub}
+                    className={activeSub === sub ? "active" : ""}
+                    onMouseEnter={() => setActiveSub(sub)}
+                  >
+                    {sub}
+                  </div>
+                ))}
+              </div>
+
+              {/* RIGHT */}
+              <div className="right">
+                {items.length > 0 ? (
+                  items.map((item, i) => <div key={i}>{item}</div>)
+                ) : (
+                  <div className="noData">No Items</div>
+                )}
+              </div>
+
+            </div>
+          )}
+        </div>
+
+        {/* OTHER MENU ITEMS */}
         <div className="menuItems">
           <NavLink to="/Exotic_Fruits_Veg">Exotic Fruits & Veg...</NavLink>
           <NavLink to="/Tea">Tea</NavLink>
@@ -160,9 +325,7 @@ const Navbar = () => {
           <NavLink to="/Fresh_Vegetables">Fresh Vegetables</NavLink>
         </div>
 
-        <div className="smartBasket">
-          Smart Basket
-        </div>
+        <div className="smartBasket">Smart Basket</div>
       </div>
 
     </div>

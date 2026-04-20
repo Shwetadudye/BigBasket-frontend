@@ -17,7 +17,7 @@
 }
 .logo img {
   width: 203px;
-height: 114px;
+  height: 114px;
 }
 .searchBox {
   flex: 1;
@@ -74,16 +74,18 @@ height: 114px;
   cursor: pointer;
 }
 .menuLink {
-  color: black;          
-  text-decoration: none;  
+  color: black;
+  text-decoration: none;
   padding: 5px 10px;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s; 
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 .menuLink:hover {
   background-color: #f0c14b;
-  color: white;              
-  cursor: pointer;           
+  color: white;
+  cursor: pointer;
 }
 button:hover {
   background-color: #f0c14b;
@@ -119,7 +121,7 @@ button:hover {
   display: flex;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   z-index: 1000;
 }
 
@@ -176,13 +178,13 @@ button:hover {
 
 .megaMenu {
   position: absolute;
-  top: 100%;  
+  top: 100%;
   left: 0;
   width: 750px;
   display: flex;
   background: rgb(212, 210, 210);
   border-radius: 8px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   z-index: 1000;
 }
 
@@ -263,7 +265,7 @@ button:hover {
 
 .logo img {
   width: 203px;
-height: 114px;
+  height: 114px;
 }
 
 .searchBox {
@@ -295,7 +297,7 @@ height: 114px;
   cursor: pointer;
 }
 
-.cart{
+.cart {
   position: relative;
   display: inline-block;
 }
@@ -347,17 +349,19 @@ height: 114px;
 }
 
 .menuLink {
-  color: black;          
-  text-decoration: none;  
+  color: black;
+  text-decoration: none;
   padding: 5px 10px;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s; 
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .menuLink:hover {
   background-color: #f0c14b;
-  color: white;              
-  cursor: pointer;           
+  color: white;
+  cursor: pointer;
 }
 button:hover {
   background-color: #f0c14b;
@@ -365,9 +369,7 @@ button:hover {
   cursor: pointer;
 }
 
-
 .smartBasket {
-  
   color: green;
   font-weight: bold;
 }
@@ -377,7 +379,6 @@ button:hover {
   color: black;
   margin-right: 15px;
   padding: 5px 10px;
-
 }
 
 .menuItems a.active {
@@ -407,11 +408,158 @@ button:hover {
   width: 100%;
   background: white;
   border: 1px solid #ccc;
-  z-index: 99999; 
+  z-index: 99999;
 }
 
 .suggestionItem {
   padding: 10px;
   cursor: pointer;
-  color: black;  
+  color: black;
+}
+.categoryWrapper {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 750px;
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* LEFT */
+.left {
+  width: 220px;
+  background: #111;
+  color: white;
+  max-height: 400px;
+  overflow-y: auto;
+
+  /* 👇 YE ADD KARO */
+  border-right: 2px solid #ccc;
+}
+
+.left div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.left .active,
+.left div:hover {
+  background: #333;
+}
+
+/* MIDDLE */
+.middle {
+  width: 260px;
+  background: #f3f3f3;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.middle div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.middle .active,
+.middle div:hover {
+  background: #ddd;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.right div {
+  padding: 8px;
+}
+
+.noData {
+  padding: 20px;
+  color: gray;
+}
+
+/* ===== CATEGORY WRAPPER ===== */
+.categoryWrapper {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 750px;
+  display: flex;
+  background: rgb(212, 210, 210);
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.left {
+  width: 220px;
+  background: #313030;
+  color: white;
+  max-height: 400px;
+  overflow-y: auto;
+  border-right: 2px solid #e0e0e0;
+  font-size: small;
+}
+
+.left div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.left .active,
+.left div:hover {
+  background: #8e8d8d;
+}
+
+.middle {
+  width: 260px;
+  background: #f3f3f3;
+  max-height: 400px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  font-weight: 300;
+  font-size: small;
+}
+
+.middle div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.middle .active,
+.middle div:hover {
+  background: #ddd;
+}
+
+.right {
+  flex: 1;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: small;
+  font-weight: 300;
+}
+
+.right div {
+  padding: 8px;
+}
+
+.noData {
+  padding: 20px;
+  color: gray;
 }
