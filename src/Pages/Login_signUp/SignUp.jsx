@@ -1,25 +1,25 @@
-import React from "react";
-import {useNavigate} from 'react-router-dom';
-import "../Login_signUp/Login.css";
-import { useDispatch } from "react-redux";
-import { signupThunk } from "../../Redux/SignupSlicer";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../Login_signUp/Login.css';
+import { useDispatch } from 'react-redux';
+import { signupThunk } from '../../Redux/SignupSlicer';
 
-const SignUp = ({ open, onClose,openLogin }) => {
+const SignUp = ({ open, onClose, openLogin }) => {
   if (!open) return null;
 
   const dispatchSignUp = useDispatch();
   const navigate = useNavigate();
 
-   const formData =[
+  const formData = [
     {
       type: 'text',
       name: 'userName',
       placeholder: 'Enter your name ',
       id: 'username',
       label: 'Username',
-      required: true
+      required: true,
     },
-   {
+    {
       type: 'email',
       name: 'userEmail',
       placeholder: 'Enter your Email ',
@@ -42,38 +42,38 @@ const SignUp = ({ open, onClose,openLogin }) => {
       id: 'userphone',
       label: 'Phone',
       required: true,
-    }
-   ];
+    },
+  ];
 
-   const [form , setForm] = React.useState(()=>{
-    return formData.reduce((acc,curr)=>{
-      acc[curr.name]= '';
+  const [form, setForm] = React.useState(() => {
+    return formData.reduce((acc, curr) => {
+      acc[curr.name] = '';
       return acc;
-   },{})
-   })
-   console.log(form);
+    }, {});
+  });
+  console.log(form);
 
-   const handleSubmit = (e) =>{
-    e.preventDefault()
-    dispatchSignUp(signupThunk(form)) // this handle api +redux
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatchSignUp(signupThunk(form)); // this handle api +redux
+  };
 
-   }
-
-   const handleChange =(e) =>{
-    const {name , value} = e.target;
-    setForm((prev)=>{
-      return{
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => {
+      return {
         ...prev,
-        [name] : value
-      }
-    })
-   }
+        [name]: value,
+      };
+    });
+  };
 
   return (
     <div className="overlay">
       <div className="modal">
-
-        <span className="closeBtn" onClick={onClose}>×</span>
+        <span className="closeBtn" onClick={onClose}>
+          ×
+        </span>
 
         <h2>Create Account</h2>
         <p className="otpText">Sign up to continue</p>
@@ -97,12 +97,9 @@ const SignUp = ({ open, onClose,openLogin }) => {
           <button type="submit">Sign Up</button>
         </form>
 
-        <p style={{ marginTop: "10px", cursor: "pointer" }}>
-          Already have an account?{" "}
-          <span
-            style={{ color: "orange" }}
-            onClick={() => navigate("/login")}
-          >
+        <p style={{ marginTop: '10px', cursor: 'pointer' }}>
+          Already have an account?{' '}
+          <span style={{ color: 'orange' }} onClick={() => navigate('/login')}>
             Login
           </span>
         </p>
@@ -110,7 +107,6 @@ const SignUp = ({ open, onClose,openLogin }) => {
         <p className="terms">
           By signing up, you agree to Terms & Privacy Policy
         </p>
-
       </div>
     </div>
   );
